@@ -13,4 +13,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Mostrar mensagem
-        run: echo "Minha primeira pipeline está rodando!"
+        run: echo "Pipeline executando"
+
+      - name: Listar arquivos do projeto
+        run: ls
