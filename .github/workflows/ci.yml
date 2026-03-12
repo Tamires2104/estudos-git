@@ -1,0 +1,16 @@
+name: Minha Pipeline CI
+
+on: [push]
+
+jobs:
+  pipeline:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Baixar código
+        uses: actions/checkout@v3
+
+      - name: Mostrar mensagem
+        run: echo "Minha primeira pipeline está rodando!"
