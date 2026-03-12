@@ -12,8 +12,10 @@ jobs:
       - name: Baixar código
         uses: actions/checkout@v3
 
-      - name: Mostrar mensagem
-        run: echo "Pipeline executando"
+      - name: Instalar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
 
-      - name: Listar arquivos do projeto
-        run: ls
+      - name: Executar script Python
+        run: python hello.py
